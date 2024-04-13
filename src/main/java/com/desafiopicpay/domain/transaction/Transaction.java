@@ -1,9 +1,7 @@
 package com.desafiopicpay.domain.transaction;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import com.desafiopicpay.domain.user.User;
 
 import java.math.BigDecimal;
@@ -13,7 +11,9 @@ import java.time.LocalDateTime;
 @Table(name = "transactions")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
+@Builder
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
